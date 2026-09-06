@@ -9844,3 +9844,711 @@ body.telescope-view-open { overflow: hidden !important; }
         font-size: clamp(1.8rem, 8vw, 3.4rem);
     }
 }
+/* =========================================================
+   MOBILE RESPONSIVE PASS — CLAUDIA'S WORLD
+   Added at the end so desktop styles remain unchanged.
+   ========================================================= */
+
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
+button,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 700px) {
+
+    /* ---------- SECRET CODE SCREEN ---------- */
+    .container {
+        width: calc(100% - 28px);
+        max-width: 560px;
+        padding: 38px 20px 32px;
+        border-radius: 26px;
+    }
+
+    .lily {
+        font-size: clamp(58px, 18vw, 78px);
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: clamp(30px, 9vw, 46px);
+        line-height: 1.12;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    input {
+        width: min(100%, 280px);
+        padding: 13px 12px;
+        font-size: 20px;
+        letter-spacing: 6px;
+    }
+
+    .container > button {
+        max-width: 100%;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .hint-system {
+        width: 100%;
+        margin-top: 22px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .hint {
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* ---------- GARDEN ---------- */
+    .garden-scene {
+        min-height: 100svh;
+        height: 100svh;
+    }
+
+    .garden-title {
+        width: calc(100% - 30px);
+        max-width: 560px;
+        margin-top: 5vh;
+        padding: 18px 18px;
+    }
+
+    .garden-title h2 {
+        font-size: clamp(34px, 10vw, 58px);
+        line-height: 1.1;
+    }
+
+    .garden-subtitle {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-top: 14px;
+    }
+
+    .garden-firefly,
+    .garden-flower,
+    .garden-lantern {
+        transform: scale(.78);
+    }
+
+    .garden-bench {
+        transform: scale(.75);
+    }
+
+    .garden-message-box,
+    .poem-box {
+        width: calc(100% - 28px);
+        max-width: 520px;
+        max-height: 78svh;
+        overflow-y: auto;
+        padding: 28px 20px;
+    }
+
+    .garden-message-box p,
+    .poem-box p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .garden-door {
+        width: 74px;
+        height: 92px;
+    }
+
+    .garden-door span {
+        width: 145px;
+        font-size: 12px;
+        bottom: -27px;
+    }
+
+    /* ---------- WORLD HUB ---------- */
+    .world-hub {
+        min-height: 100svh;
+        height: 100svh;
+        padding-top: 8svh;
+        overflow: hidden;
+    }
+
+    .hub-content {
+        width: calc(100% - 30px);
+        max-width: 560px;
+    }
+
+    .hub-content h2 {
+        font-size: clamp(38px, 11vw, 62px);
+        line-height: 1.05;
+    }
+
+    .hub-subtitle {
+        max-width: 330px;
+        margin: 14px auto 0;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .world-door {
+        width: 76px;
+        height: 76px;
+        font-size: 34px;
+    }
+
+    .world-door span {
+        width: 130px;
+        bottom: -28px;
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+    /* Keep the hub doors separated on narrow screens. */
+    .world-hub .princess-door {
+        left: 23%;
+        top: 28%;
+        transform: translate(-50%, -50%) scale(.82);
+    }
+
+    .world-hub .music-door {
+        right: 23%;
+        top: 28%;
+        transform: translate(50%, -50%) scale(.82);
+    }
+
+    .world-hub .letters-door {
+        left: 23%;
+        top: 49%;
+        transform: translate(-50%, -50%) scale(.82);
+    }
+
+    .world-hub .gallery-door {
+        right: 23%;
+        top: 49%;
+        transform: translate(50%, -50%) scale(.82);
+    }
+
+    .world-hub .places-door {
+        left: 23%;
+        top: 70%;
+        transform: translate(-50%, -50%) scale(.82);
+    }
+
+    .world-hub .peace-door {
+        left: 77%;
+        top: 70%;
+        transform: translate(-50%, -50%) scale(.82);
+    }
+
+    .world-hub .quiet-door {
+        right: 23%;
+        top: 82%;
+        transform: translate(50%, -50%) scale(.70);
+    }
+
+    .world-hub .mystery-door {
+        left: 50%;
+        top: 59%;
+        transform: translate(-50%, -50%) scale(.72);
+    }
+
+    .world-hub .something-door {
+        right: 12px;
+        bottom: 12px;
+        transform: scale(.62);
+    }
+
+    /* ---------- MUSIC ROOM ---------- */
+    .music-room {
+        min-height: 100svh;
+        height: 100svh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .music-room-content {
+        width: 100%;
+        min-height: 100svh;
+        padding: 34px 14px 90px;
+    }
+
+    .music-room-title h2 {
+        font-size: clamp(34px, 10vw, 52px);
+        line-height: 1.1;
+    }
+
+    .music-room-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .playlist-container {
+        width: 100%;
+        gap: 22px;
+    }
+
+    .music-center {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .playlist-card {
+        width: min(100%, 430px);
+        padding: 20px 14px;
+    }
+
+    .playlist-card iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 352px;
+        border-radius: 12px;
+    }
+
+    .record-player {
+        width: min(195px, 55vw);
+        height: min(195px, 55vw);
+    }
+
+    .record {
+        width: 78%;
+        height: 78%;
+    }
+
+    .music-room-return {
+        position: relative;
+        margin: 30px auto 0;
+    }
+
+    /* ---------- PRINCESS ROOM ---------- */
+    .princess-room {
+        width: 100vw;
+        height: 100svh;
+        min-height: 100svh;
+        overflow: hidden;
+    }
+
+    .princess-room-content {
+        width: 100vw;
+        height: 100svh;
+    }
+
+    .princess-room .princess-return {
+        bottom: max(16px, env(safe-area-inset-bottom)) !important;
+        min-width: 0 !important;
+        width: calc(100% - 36px) !important;
+        max-width: 320px !important;
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+        font-size: 15px !important;
+    }
+
+    .princess-mirror {
+        max-width: 30%;
+    }
+
+    /* ---------- GALLERY ---------- */
+    .favorite-gallery {
+        min-height: 100svh;
+        height: 100svh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .favorite-gallery-content {
+        width: 100%;
+        min-height: 100svh;
+        padding: 38px 16px 80px;
+    }
+
+    .favorite-gallery-title h2 {
+        font-size: clamp(34px, 10vw, 54px);
+        line-height: 1.1;
+    }
+
+    .favorite-photos {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .favorite-photo {
+        width: min(88%, 330px);
+        max-width: 330px;
+    }
+
+    .photo-message {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .gallery-return,
+    .favorite-return {
+        max-width: calc(100% - 32px);
+    }
+
+    /* ---------- PEACE ROOM ---------- */
+    .peace-room {
+        width: 100vw;
+        height: 100svh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .peace-background {
+        width: 100%;
+        min-height: 300vh;
+        overflow: hidden;
+    }
+
+    .peace-section {
+        width: 100%;
+        min-height: 100svh;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .peace-title {
+        width: min(92%, 620px);
+    }
+
+    .peace-title h2 {
+        font-size: clamp(36px, 11vw, 58px);
+        line-height: 1.05;
+    }
+
+    .peace-subtitle {
+        width: min(92%, 520px);
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .peace-moon {
+        right: 7%;
+        font-size: clamp(48px, 16vw, 88px);
+    }
+
+    .peace-garden-section {
+        width: 100%;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .peace-garden {
+        width: min(94vw, 620px);
+        height: min(105vw, 560px);
+        min-height: 420px;
+    }
+
+    .peace-garden::before {
+        width: 82%;
+        max-width: 520px;
+    }
+
+    .peace-cross {
+        width: 78px;
+        height: 120px;
+    }
+
+    .peace-dove,
+    .peace-bible {
+        width: 110px;
+        height: 78px;
+    }
+
+    .peace-candle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .peace-bench {
+        width: 100px;
+        height: 100px;
+    }
+
+    .peace-dove::before,
+    .peace-bible::before,
+    .peace-candle::before,
+    .peace-bench::before {
+        width: 100px;
+    }
+
+    .peace-garden-text {
+        width: 88%;
+    }
+
+    .peace-garden-text p,
+    .peace-reflection-text {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .peace-reflection-section {
+        padding: 40px 16px 80px;
+    }
+
+    .peace-reflection {
+        width: min(94vw, 650px);
+        padding: 28px 20px;
+    }
+
+}
+
+/* Very small phones: tighten only the elements that need it. */
+@media (max-width: 390px) {
+    .container {
+        width: calc(100% - 20px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hint-system {
+        padding: 13px;
+    }
+
+    .world-door {
+        width: 68px;
+        height: 68px;
+        font-size: 30px;
+    }
+
+    .world-door span {
+        width: 118px;
+        font-size: 10px;
+    }
+
+    .world-hub .something-door {
+        right: 4px;
+        bottom: 4px;
+    }
+}
+
+/* Respect phones with a home-indicator / browser safe area. */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .music-room-content,
+    .favorite-gallery-content,
+    .peace-reflection-section {
+        padding-bottom: calc(70px + env(safe-area-inset-bottom));
+    }
+}
+
+/* =========================================================
+   MOBILE HUB TEST — SHOW THE COMPLETE ORIGINAL ARTWORK
+   The original 1536x1024 artwork stays at its exact 3:2 ratio.
+   On phones it is scaled to the viewport width and centered,
+   so no scenery is stretched or cropped.
+   ========================================================= */
+@media (max-width: 700px) {
+    .world-hub {
+        background: #120d1d !important;
+        padding-top: 0 !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+
+    .world-hub::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100vw;
+        aspect-ratio: 3 / 2;
+        transform: translate(-50%, -50%);
+        background: url("world-hub.png") center center / 100% 100% no-repeat;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* The artwork already contains the doorway signs/text. */
+    .world-hub .hub-content {
+        display: none !important;
+    }
+
+    /* Transparent hit areas sit over the matching doorways. */
+    .world-hub .world-door {
+        width: 76px !important;
+        height: 76px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        color: transparent !important;
+        font-size: 0 !important;
+        opacity: 1 !important;
+        z-index: 10 !important;
+    }
+
+    .world-hub .world-door span {
+        display: none !important;
+    }
+
+    /* Coordinates are based on the original 1536x1024 artwork. */
+    .world-hub .princess-door {
+        left: 24.3vw !important;
+        top: calc(50% - 20vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .music-door {
+        left: 77.3vw !important;
+        right: auto !important;
+        top: calc(50% - 20vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .letters-door {
+        left: 11.5vw !important;
+        top: calc(50% + 0.3vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .gallery-door {
+        left: 87.7vw !important;
+        right: auto !important;
+        top: calc(50% - 0.2vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .mystery-door {
+        left: 50vw !important;
+        top: calc(50% - 21.7vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* The HTML uses .something-door; keep its hit area over the
+       "Something Waiting..." doorway in the original artwork. */
+    .world-hub .something-door {
+        left: 50vw !important;
+        top: calc(50% - 21.7vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .places-door {
+        left: 23.5vw !important;
+        top: calc(50% + 20.2vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .world-hub .peace-door {
+        left: 50.8vw !important;
+        top: calc(50% + 20.5vw) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+/* =========================================================
+   MOBILE PRINCESS ROOM TEST — SHOW THE COMPLETE ORIGINAL ARTWORK
+   The original 1708x921 artwork stays at its exact aspect ratio.
+   On phones it is scaled to the viewport width and centered,
+   so the entire room remains visible without distortion/cropping.
+   ========================================================= */
+@media (max-width: 700px) {
+    .princess-room {
+        background: #160d1c !important;
+        overflow: hidden !important;
+    }
+
+    .princess-room::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100vw;
+        height: 53.9227vw;
+        transform: translateY(-50%);
+        background: url("princess-room.png") center center / 100% 100% no-repeat;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .princess-room-content {
+        display: none !important;
+    }
+
+    /* Transparent hit areas are positioned relative to the original
+       artwork rather than the phone viewport. */
+    .princess-room .princess-mirror {
+        left: 32vw !important;
+        top: calc(50% - 17.25vw) !important;
+        width: 17vw !important;
+        height: 18.87vw !important;
+        max-width: none !important;
+        transform: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        z-index: 10 !important;
+    }
+
+    .princess-room .princess-crown {
+        left: 83vw !important;
+        right: auto !important;
+        top: calc(50% + 17.26vw) !important;
+        width: 15vw !important;
+        height: 8.63vw !important;
+        transform: none !important;
+        background: transparent !important;
+        filter: none !important;
+        z-index: 10 !important;
+    }
+
+    .princess-room .princess-bed {
+        left: 5vw !important;
+        top: calc(50% - 13.48vw) !important;
+        width: 32vw !important;
+        height: 25.88vw !important;
+        transform: none !important;
+        background: transparent !important;
+        z-index: 10 !important;
+    }
+
+    .princess-room .princess-window {
+        left: 66vw !important;
+        right: auto !important;
+        top: calc(50% - 18.33vw) !important;
+        width: 14vw !important;
+        height: 17.26vw !important;
+        transform: none !important;
+        background: transparent !important;
+        z-index: 10 !important;
+    }
+
+    .princess-room .princess-desk {
+        left: 90vw !important;
+        right: auto !important;
+        top: calc(50% + 2.70vw) !important;
+        width: 10vw !important;
+        height: 7.55vw !important;
+        transform: none !important;
+        background: transparent !important;
+        z-index: 10 !important;
+    }
+
+    .princess-room .princess-return {
+        z-index: 30 !important;
+        bottom: max(16px, env(safe-area-inset-bottom)) !important;
+    }
+}
