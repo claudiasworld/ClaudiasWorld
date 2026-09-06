@@ -2834,13 +2834,6 @@ padding: 0;
 .world-hub .music-door,
 .world-hub .gallery-door,
 .world-hub .places-door,
-    .world-hub .stargazing-door {
-        left: 50vw !important;
-        right: auto !important;
-        top: calc(50% - 37vw) !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
 .world-hub .peace-door {
     scale: 0.78;
     opacity: 0.78;
@@ -10061,13 +10054,6 @@ input {
         transform: translate(-50%, -50%) scale(.82);
     }
 
-    .world-hub .stargazing-door {
-        left: 50vw !important;
-        right: auto !important;
-        top: calc(50% - 37vw) !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
     .world-hub .peace-door {
         left: 77%;
         top: 70%;
@@ -10464,13 +10450,6 @@ input {
     .world-hub .places-door {
         left: 23.5vw !important;
         top: calc(50% + 20.2vw) !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
-    .world-hub .stargazing-door {
-        left: 50vw !important;
-        right: auto !important;
-        top: calc(50% - 37vw) !important;
         transform: translate(-50%, -50%) !important;
     }
 
