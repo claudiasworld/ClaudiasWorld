@@ -10552,3 +10552,24 @@ input {
         bottom: max(16px, env(safe-area-inset-bottom)) !important;
     }
 }
+/* MOBILE STARGAZING HIT AREA */
+@media (max-width: 700px) {
+    .world-hub .stargazing-door {
+        left: 57vw !important;
+        right: auto !important;
+        top: calc(50% - 27vw) !important;
+        width: 18vw !important;
+        height: 18vw !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 20 !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: transparent !important;
+        font-size: 0 !important;
+    }
+
+    .world-hub .stargazing-door span {
+        display: none !important;
+    }
+}
