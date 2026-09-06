@@ -385,6 +385,9 @@ function hideAllWorldSections() {
     const lettersRoom =
         document.getElementById("lettersRoom");
 
+    const stargazingRoom =
+        document.getElementById("stargazingRoom");
+
     if (garden) {
         garden.style.display = "none";
     }
@@ -415,6 +418,10 @@ function hideAllWorldSections() {
 
     if (lettersRoom) {
         lettersRoom.style.display = "none";
+    }
+
+    if (stargazingRoom) {
+        stargazingRoom.style.display = "none";
     }
 }
 
@@ -759,6 +766,142 @@ function closeDeskMessage() {
 // ============================================
 // MUSIC ROOM
 // ============================================
+
+
+// ============================================
+// THE STARGAZING ROOM
+// ============================================
+
+
+function createShootingStars() {
+    const sky = document.querySelector(".stargazing-sky");
+    if (!sky || sky.dataset.shootingStarsReady === "true") return;
+
+    sky.dataset.shootingStarsReady = "true";
+
+    for (let i = 0; i < 5; i++) {
+        const star = document.createElement("span");
+        star.className = "shooting-star shooting-star-" + (i + 1);
+        sky.appendChild(star);
+    }
+}
+
+function openStargazingRoom() {
+
+    const garden = document.querySelector(".garden-scene");
+    const worldHub = document.getElementById("worldHub");
+    const stargazingRoom = document.getElementById("stargazingRoom");
+
+    if (garden) garden.style.display = "none";
+    if (worldHub) worldHub.style.display = "none";
+
+    [
+        "princessRoom",
+        "favoriteGallery",
+        "musicRoom",
+        "peaceRoom",
+        "lettersRoom",
+        "galleryRoom",
+        "placesRoom",
+        "somethingWaitedRoom"
+    ].forEach(function (id) {
+        const room = document.getElementById(id);
+        if (room) room.style.display = "none";
+    });
+
+    if (stargazingRoom) {
+        stargazingRoom.style.display = "block";
+        stargazingRoom.style.position = "fixed";
+        stargazingRoom.style.inset = "0";
+        stargazingRoom.style.zIndex = "10000";
+        stargazingRoom.scrollTop = 0;
+        createShootingStars();
+    }
+}
+
+function closeStargazingRoom() {
+
+    const stargazingRoom = document.getElementById("stargazingRoom");
+    const worldHub = document.getElementById("worldHub");
+
+    if (stargazingRoom) {
+        stargazingRoom.style.display = "none";
+        stargazingRoom.scrollTop = 0;
+    }
+
+    if (worldHub) {
+        worldHub.style.display = "flex";
+        worldHub.style.position = "fixed";
+        worldHub.style.inset = "0";
+        worldHub.style.zIndex = "5000";
+    }
+}
+
+const stargazingMessages = {
+    1: ["✦", "A Beginning", "Every story has a first little moment. Sometimes you don't realize how important it is until you look back. Looking back at the first time we talked, we definitely didn't start off on the best foot. But you gave me another chance, and somehow, our relationship blossomed into something truly wonderful and completely unexpected."],
+    2: ["✧", "An Unexpected Place", "I never expected you to become such an important part of my life. Somewhere along the way, you went from someone I barely knew to someone whose presence became something I genuinely cherished."],
+    3: ["✦", "Something I Hope You Know", "You have made an impact on my life that I won't pretend didn't matter."],
+    4: ["✧", "A Quiet Reminder", "You don't have to have everything figured out. Take your time. You're allowed to become who you're meant to be."],
+    5: ["✦", "For the Nights You Overthink", "Put your thoughts down for a moment. Not every question needs an answer tonight."],
+    6: ["✧", "One Last Star", "Whatever comes next, I hope there are still beautiful things waiting for you along your journey, and that we both continue to grow... hopefully together."]
+};
+
+function revealStarMessage(number) {
+
+    const data = stargazingMessages[number];
+    const overlay = document.getElementById("stargazingMessage");
+
+    if (!data || !overlay) return;
+
+    document.getElementById("stargazingMessageSymbol").textContent = data[0];
+    document.getElementById("stargazingMessageTitle").textContent = data[1];
+    document.getElementById("stargazingMessageText").textContent = data[2];
+
+    overlay.style.display = "flex";
+}
+
+function closeStarMessage() {
+    const overlay = document.getElementById("stargazingMessage");
+    if (overlay) overlay.style.display = "none";
+}
+
+function lookThroughTelescope() {
+
+    const cinema = document.getElementById("telescopeCinema");
+    const telescope = document.querySelector(".telescope-visual");
+
+    if (!cinema) return;
+
+    if (telescope) telescope.classList.add("telescope-lift-off");
+
+    cinema.classList.remove("closing");
+    cinema.classList.add("active");
+    cinema.setAttribute("aria-hidden", "false");
+    document.body.classList.add("telescope-view-open");
+
+    setTimeout(function () {
+        cinema.classList.add("reveal-stars");
+    }, 850);
+}
+
+function closeTelescopeCinema() {
+
+    const cinema = document.getElementById("telescopeCinema");
+    const telescope = document.querySelector(".telescope-visual");
+
+    if (!cinema) return;
+
+    cinema.classList.remove("reveal-stars");
+    cinema.classList.add("closing");
+    cinema.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("telescope-view-open");
+
+    if (telescope) telescope.classList.remove("telescope-lift-off");
+
+    setTimeout(function () {
+        cinema.classList.remove("active", "closing");
+    }, 900);
+}
 
 function openMusicRoom() {
 

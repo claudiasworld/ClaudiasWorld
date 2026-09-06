@@ -438,6 +438,24 @@
             </span>
 
         </button>
+
+        <!-- ============================================
+             STARGAZING ROOM
+             ============================================ -->
+
+        <button
+            class="world-door stargazing-door"
+            onclick="openStargazingRoom()"
+            aria-label="Open the Stargazing Room">
+
+            🌙
+
+            <span>
+                The Stargazing Room
+            </span>
+
+        </button>
+
 <!-- ============================================
      RETURN TO THE GARDEN
      ============================================ -->
@@ -457,6 +475,165 @@
     </div>
 
 
+
+
+    <!-- ============================================
+         THE STARGAZING ROOM
+         ============================================ -->
+
+    <div class="stargazing-room" id="stargazingRoom" style="display: none;">
+
+        <div class="stargazing-sky">
+
+            <div class="sky-star sky-star-1">✦</div>
+            <div class="sky-star sky-star-2">✧</div>
+            <div class="sky-star sky-star-3">·</div>
+            <div class="sky-star sky-star-4">✦</div>
+            <div class="sky-star sky-star-5">✧</div>
+            <div class="sky-star sky-star-6">·</div>
+            <div class="sky-star sky-star-7">✦</div>
+            <div class="sky-star sky-star-8">·</div>
+            <div class="sky-star sky-star-9">✧</div>
+            <div class="sky-star sky-star-10">✦</div>
+            <div class="sky-star sky-star-11">·</div>
+            <div class="sky-star sky-star-12">✧</div>
+            <div class="sky-star sky-star-13">✦</div>
+            <div class="sky-star sky-star-14">·</div>
+            <div class="sky-star sky-star-15">✧</div>
+            <div class="sky-star sky-star-16">✦</div>
+            <div class="sky-star sky-star-17">·</div>
+            <div class="sky-star sky-star-18">✧</div>
+
+            <div class="stargazing-moon">☾</div>
+            <div class="stargazing-cloud cloud-one"></div>
+            <div class="stargazing-cloud cloud-two"></div>
+
+            <section class="stargazing-section stargazing-arrival">
+                <div class="stargazing-intro">
+                    <p class="stargazing-small">somewhere above everything</p>
+                    <h2>✦ The Stargazing Room</h2>
+                    <p class="stargazing-subtitle">
+                        A quiet place to look up,<br>
+                        get lost in the stars, and breathe for a while.
+                    </p>
+                    <div class="stargazing-scroll-hint">
+                        <span>Look around</span>
+                        <span class="stargazing-scroll-arrow">↓</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stargazing-section constellation-section">
+                <div class="constellation-copy">
+                    <p class="stargazing-small">a little constellation</p>
+                    <h3>Some stars are meant to be found.</h3>
+                    <p>
+                        There are a few stars scattered across the sky.
+                        Click the ones that catch your eye.
+                    </p>
+                </div>
+
+                <div class="constellation">
+                    <span class="constellation-line line-1"></span>
+                    <span class="constellation-line line-2"></span>
+                    <span class="constellation-line line-3"></span>
+                    <span class="constellation-line line-4"></span>
+                    <span class="constellation-line line-5"></span>
+                    <span class="constellation-line line-6"></span>
+
+                    <button class="constellation-star constellation-star-1" onclick="revealStarMessage(1)" aria-label="Star one">✦</button>
+                    <button class="constellation-star constellation-star-2" onclick="revealStarMessage(2)" aria-label="Star two">✦</button>
+                    <button class="constellation-star constellation-star-3" onclick="revealStarMessage(3)" aria-label="Star three">✦</button>
+                    <button class="constellation-star constellation-star-4" onclick="revealStarMessage(4)" aria-label="Star four">✦</button>
+                    <button class="constellation-star constellation-star-5" onclick="revealStarMessage(5)" aria-label="Star five">✦</button>
+                    <button class="constellation-star constellation-star-6" onclick="revealStarMessage(6)" aria-label="Star six">✦</button>
+
+                    <div class="constellation-name">
+                        <span>The constellation</span>
+                        <strong>of little memories</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stargazing-section telescope-section">
+                <button class="telescope-visual" onclick="lookThroughTelescope()" aria-label="Look through the telescope">
+                    <div class="telescope-tripod"></div>
+                    <div class="telescope-body">
+                        <div class="telescope-lens"></div>
+                    </div>
+                    <span class="telescope-glow"></span>
+                </button>
+
+                <div class="telescope-copy">
+                    <p class="stargazing-small">one more thing to see</p>
+                    <h3>Look a little closer.</h3>
+                    <p>
+                        Sometimes the things that matter most
+                        are the things you have to slow down to notice.
+                    </p>
+
+                    <button class="telescope-button" onclick="lookThroughTelescope()">
+                        🔭 <span>Look Through the Telescope</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="stargazing-section stargazing-final">
+                <div class="stargazing-final-content">
+                    <div class="final-moon">☾</div>
+                    <p class="stargazing-small">before you leave</p>
+                    <h3>Look up.</h3>
+                    <p>
+                        No matter how busy life gets,
+                        there will always be a sky above you.
+                    </p>
+                    <p class="stargazing-final-line">
+                        And somewhere in it,
+                        a little reminder to keep going.
+                    </p>
+
+                    <button class="stargazing-return" onclick="closeStargazingRoom()">
+                        ✦ <span>Return to Claudia's World</span>
+                    </button>
+                </div>
+            </section>
+
+            <div class="telescope-cinema" id="telescopeCinema" aria-hidden="true">
+                <div class="telescope-cinema-sky">
+                    <div class="scope-star scope-star-a"></div>
+                    <div class="scope-star scope-star-b"></div>
+                    <div class="scope-star scope-star-c"></div>
+                    <div class="scope-star scope-star-d"></div>
+                    <div class="scope-star scope-star-e"></div>
+                    <div class="scope-star scope-star-f"></div>
+                    <div class="scope-star scope-star-g"></div>
+                    <div class="scope-star scope-star-h"></div>
+                    <div class="scope-star scope-star-i"></div>
+                    <div class="scope-star scope-star-j"></div>
+                    <div class="scope-star scope-star-k"></div>
+                    <div class="scope-star scope-star-l"></div>
+                    <div class="scope-message">
+                        <span class="scope-star-text">I LOVE YOU</span>
+                    </div>
+                </div>
+                <div class="telescope-eyepiece-animation" aria-hidden="true">
+                    <div class="eyepiece-ring"></div>
+                    <div class="eyepiece-glass"></div>
+                </div>
+                <button class="telescope-cinema-close" onclick="closeTelescopeCinema()">look away ✦</button>
+            </div>
+
+            <div class="stargazing-message" id="stargazingMessage" style="display: none;">
+                <div class="stargazing-message-box">
+                    <div class="stargazing-message-symbol" id="stargazingMessageSymbol">✦</div>
+                    <h3 id="stargazingMessageTitle">A Little Star</h3>
+                    <p id="stargazingMessageText">Some things are worth remembering.</p>
+                    <button onclick="closeStarMessage()">Keep looking ✨</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- ============================================
          THE MUSIC ROOM
